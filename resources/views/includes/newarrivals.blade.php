@@ -32,7 +32,7 @@
                         @endfor
                         
                         <h3>{{ $item->title }}</h3>
-                        <div class="product-description" data-name="{{ $item->category->category }}" data-price="{{ $item->price }}">
+                        <div class="product-description" data-name="{{ $item->title}}" data-price="{{ $item->price }}">
 
                             <p class="product-price">&euro; {{ $item->price }}</p>
                             <form class="add-to-cart" action="{{ route('cart') }}" method="get">
