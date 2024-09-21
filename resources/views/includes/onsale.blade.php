@@ -5,7 +5,7 @@
                 <h2>On Sale</h2>
             </div>
             <div class="row">
-                @foreach ($onsale as $item)    
+                @foreach ($newarrivals as $item)    
                 <div class="col-md-3">
                     <div class="product-top">
                         <img src="{{ asset('assets/images/'.$item->image) }}">
@@ -26,25 +26,16 @@
 
 
                     <div class="product-bottom text-center">
-                        @for ($i = 1; $i <=$item->star; $i=$i+2)
+                        @for ($i = 1; $i < $item->star; $i=$i+2)
                             
                         <i class="fa fa-star"></i>
                         @endfor
-                       
+                        
                         <h3>{{ $item->title }}</h3>
-                        <div class="product-description" data-name="{{ $item->title }}" data-price="{{ $item->price }}">
+                        <div class="product-description" data-name="{{ $item->title}}" data-price="{{ $item->price }}">
 
                             <p class="product-price">&euro; {{ $item->price }}</p>
-                            <form class="add-to-cart" action="{{ route('cart') }}" method="get">
-                                @csrf
-                                <div>
-                                    <label for="qty-2">Quantity</label>
-                                    <input type="text" name="qty-2" id="qty-2" class="qty"
-                                        value="1" />
-                                </div>
-                                <p><input type="submit" value="Add to cart" class="btn" /></p>
-                            </form>
-
+                         
                         </div>
                     </div>
                 </div>
