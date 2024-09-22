@@ -9,3 +9,4 @@ Route::get('/', function () {
 Route::get('index',[PublicController::class,'index'])->name('index');
 Route::get('cart',[PublicController::class,'cart'])->name('cart');
 Route::get('checkout',[PublicController::class,'checkout'])->name('checkout');
+Route::post('contact',[PublicController::class,'contact'])->name('contact');

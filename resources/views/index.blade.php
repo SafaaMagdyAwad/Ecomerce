@@ -4,6 +4,7 @@
 @include('includes.head');
 
 <body>
+   
         @include('includes.nav');
         @include('includes.slider');
         @include('includes.featured');
@@ -14,7 +15,7 @@
         @include('includes.team');
         @include('includes.contact');
 
-        @include('includes.script');          
+        @include('includes.script');
 </body>
 
 </html>

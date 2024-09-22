@@ -5,18 +5,19 @@
         <h1>Get In Touch</h1>
         <div class="row">
             <div class="col-md-6">
-                <form class="contact-form">
+                <form class="contact-form" action="{{ route('contact') }}" method="post">
+                    @csrf
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name..">
+                        <input type="text" class="form-control" placeholder="Your Name.." name="name">
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" placeholder="Phone no.">
+                        <input type="number" class="form-control" placeholder="Phone no." name="phone">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email..">
+                        <input type="email" class="form-control" placeholder="Email.." name="email">
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" rows="4" placeholder="Message.."></textarea>
+                        <textarea class="form-control" rows="4" placeholder="Message.." name="message"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
